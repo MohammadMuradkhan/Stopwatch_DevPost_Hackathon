@@ -10,7 +10,7 @@ clock_status.addEventListener("click",()=>{
     if(flag===0){
         startTime = new Date();
         intervalId = setInterval(()=>{
-            clock_status.innerHTML = "stop";
+            clock_status.innerHTML = "stop it!";
             clock.style.backgroundColor="green";
             const now = new Date();
             const diff = now-startTime; // in milliseconds
@@ -34,7 +34,7 @@ clock_status.addEventListener("click",()=>{
         const minutes = Math.floor((totalDiff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((totalDiff % (1000 * 60)) / 1000);
         clock.innerHTML = `Time Elapsed: ${hours}hrs:${minutes}mins:${seconds}secs`;
-        clock_status.innerHTML = "start again";
+        clock_status.innerHTML = "Start timer again";
 
         flag=0; 
     }
